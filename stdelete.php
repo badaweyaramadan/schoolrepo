@@ -6,12 +6,14 @@
 </head>
 
 <body>
+<div align="right">
+<a href="index.php" >الرئيسية</a> &nbsp;&nbsp;&nbsp;
+</div>
 <?php
 $HostName="localhost";
-$db_name="webapp";
+$db_name="schooldb";
 $LoginName="root";
 $LoginPassword="";
-
    
 ?>
  <?php
@@ -19,19 +21,23 @@ $LoginPassword="";
 	if (!$con){die('Could not connect: ' . mysql_error());}
   	mysql_select_db($db_name , $con);
 		mysql_query("set names 'utf8';");
-	$sql = "SELECT * FROM users" ;
+	$sql = "SELECT * FROM student" ;
 	
 	$result = mysql_query($sql,$con) ;
 	?>
+
   <?php
 	while($row = mysql_fetch_array($result)){
 	?>
+    
 <form name="myform" method="get">
+
 <input type="hidden" name="s_id" value="<?php echo "$row[st_id]"?>" />
  Name: <input type="text" name="s_name" value="<?php echo "$row[st_name]"?>" />
 Age<input type="text" name="s_age" value=" <?php echo "$row[st_age]"?>">
 Class:<input type="text" name="s_class" value=" <?php echo "$row[st_class]"?>">
   <input type="submit" value="حذف" /><hr />
+  
 </form>
   <?php
 	;}
@@ -53,15 +59,24 @@ $LoginPassword="";
   	}
   
   	mysql_select_db($db_name , $con);
-	$ss_id= $_GET['s_id'] ;
+	
+	$uu_id= $_GET['s_id'] ;
 	if ( isset($_GET['s_id'])) {
-	$sql = "DELETE FROM student WHERE st_id ='$ss_id'" ;}
+	$sql = "DELETE FROM student WHERE st_id ='$uu_id'" ;}
 	
 	mysql_query($sql,$con) ;
 	
   mysql_close($con);
   
 ?>
-
+<a href="index.php">الرئيسية</a> &nbsp;&nbsp;&nbsp;
+<a href="stinsert.php">إدخال طلاب</a> &nbsp;&nbsp;&nbsp;
+<a href="stselect.php">عرض طلاب</a> &nbsp;&nbsp;&nbsp;
+<a href="stdelete.php">حذف طلاب</a> &nbsp;&nbsp;&nbsp;
+<a href="stupdate.php">تعديل طلاب</a> &nbsp;&nbsp;&nbsp;
+<a href="teinsert.php">ادخال معلمين</a> &nbsp;&nbsp;&nbsp;
+<a href="teselect.php">عرض معلمين</a> &nbsp;&nbsp;&nbsp;
+<a href="tedelete.php">حذف معلمين</a> &nbsp;&nbsp;&nbsp;
+<a href="teupdate.php">تعديل معلمين</a> &nbsp;&nbsp;&nbsp
 </body>
 </html>

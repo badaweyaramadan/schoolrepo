@@ -6,6 +6,9 @@
 </head>
 
 <body>
+<div align="right">
+<a href="index.php" >الرئيسية</a> &nbsp;&nbsp;&nbsp;
+</div>
 <?php
 $HostName="localhost";
 $db_name="schooldb";
@@ -57,5 +60,14 @@ $LoginPassword="";
   mysql_close($con);
 
 ?>
+<a href="index.php">الرئيسية</a> &nbsp;&nbsp;&nbsp;
+<a href="stinsert.php">إدخال طلاب</a> &nbsp;&nbsp;&nbsp;
+<a href="stselect.php">عرض طلاب</a> &nbsp;&nbsp;&nbsp;
+<a href="stdelete.php">حذف طلاب</a> &nbsp;&nbsp;&nbsp;
+<a href="stupdate.php">تعديل طلاب</a> &nbsp;&nbsp;&nbsp;
+<a href="teinsert.php">ادخال معلمين</a> &nbsp;&nbsp;&nbsp;
+<a href="teselect.php">عرض معلمين</a> &nbsp;&nbsp;&nbsp;
+<a href="tedelete.php">حذف معلمين</a> &nbsp;&nbsp;&nbsp;
+<a href="teupdate.php">تعديل معلمين</a> &nbsp;&nbsp;&nbsp;
 </body>
 </html>
