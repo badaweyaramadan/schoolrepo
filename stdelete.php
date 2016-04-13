@@ -53,7 +53,6 @@ $LoginPassword="";
   	}
   
   	mysql_select_db($db_name , $con);
-	
 	$ss_id= $_GET['s_id'] ;
 	if ( isset($_GET['s_id'])) {
 	$sql = "DELETE FROM student WHERE st_id ='$ss_id'" ;}
