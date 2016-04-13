@@ -23,7 +23,7 @@
 <a href="teselect.php">عرض معلمين</a> &nbsp;&nbsp;&nbsp;
 <a href="tedelete.php">حذف معلمين</a> &nbsp;&nbsp;&nbsp;
 <a href="teupdate.php">تعديل معلمين</a> &nbsp;&nbsp;&nbsp
-   
+  
    </nav>
  
 
