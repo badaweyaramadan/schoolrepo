@@ -38,7 +38,7 @@ class:<input name="s_class" type="text" /><br/>
 
 <?php 
 $HostName="localhost";
-$db_name="school";
+$db_name="schooldb";
 $LoginName="root";
 $LoginPassword="";
 
